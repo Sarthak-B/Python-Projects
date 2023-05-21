@@ -1,5 +1,15 @@
 x------------------------------------------------------------------------------------------------------------------------------x
 HTML
+Put all this in HTML head ------->
+<link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 x------------------------------------------------------------------------------------------------------------------------------x
 
 <div class="container">
@@ -12,7 +22,7 @@ x-------------------------------------------------------------------------------
 </div>
 
 x------------------------------------------------------------------------------------------------------------------------------x
-CSS
+CSS(scss)
 x------------------------------------------------------------------------------------------------------------------------------x
 
 $primary-font:  'Indie Flower', cursive;
