@@ -1,0 +1,100 @@
+x------------------------------------------------------------------------------------------------------------------------------x
+HTML
+x------------------------------------------------------------------------------------------------------------------------------x
+
+<div class="container">
+  <h2 class="loki">
+    <p class="letter">S</p>
+    <p class="letter">A</p>
+    <p class="letter">R</p>
+    <p class="letter">U</p>
+  </h2>
+</div>
+
+x------------------------------------------------------------------------------------------------------------------------------x
+CSS
+x------------------------------------------------------------------------------------------------------------------------------x
+
+$primary-font:  'Indie Flower', cursive;
+$bg-dark: #121212;
+$text-color: #ffffffda;
+
+html {
+  font-family: 100%;
+  box-sizing: border-box;
+}
+
+*,*::before,*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: $primary-font;
+  background-color: $bg-dark;
+  color: $text-color;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  height: 100%;
+  width: 100%;  
+  display: grid;
+  place-content: center;
+  
+  background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+  background-size: cover;
+}
+
+.loki {
+  font-size: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30rem;
+  
+  .letter{
+     text-shadow: 0 0 0.4em $text-color, 0 0 0.5em $text-color, 0 0 0.25em $text-color;
+    mix-blend-mode: screen;
+  }
+}
+
+x------------------------------------------------------------------------------------------------------------------------------x
+JS
+x------------------------------------------------------------------------------------------------------------------------------x
+
+const fonts = [
+  'Kirang Haerang',
+  'Indie Flower',
+  'Rye',
+   'Amatic SC',
+  'Bangers',
+  'Fredericka the Great'
+];
+
+const letters = document.querySelectorAll('.letter');
+
+let count=0;
+
+const rollIntro = () => {
+  letters.forEach(letter => {
+    
+  let randomFontIndex = Math.floor(Math.random() * fonts.length);
+    let randomFont = fonts[randomFontIndex];
+  
+ letter.style.fontFamily=randomFont;
+});
+}
+
+let introAnimation = setInterval(function() {
+  rollIntro();
+  if(count>15)
+    clearInterval(introAnimation);
+  count++;
+},350);
